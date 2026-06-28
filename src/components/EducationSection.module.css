@@ -1,0 +1,150 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--bg-tertiary);
+  transform: translateX(-50%);
+}
+
+.timelineProgress {
+  width: 100%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  transition: height 2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Timeline Item */
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  width: 50%;
+}
+
+.timelineItem.left {
+  padding-right: 50px;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.timelineItem.right {
+  padding-left: 50px;
+  margin-left: 50%;
+}
+
+/* Timeline Dot */
+.timelineDot {
+  position: absolute;
+  top: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  z-index: 2;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.left .timelineDot {
+  right: -22px;
+}
+
+.right .timelineDot {
+  left: -22px;
+}
+
+/* Timeline Card */
+.timelineCard {
+  padding: 28px;
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.timelineCard:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.period {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  padding: 4px 12px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color-hover);
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.degree {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.institution {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+  margin-bottom: 8px;
+}
+
+.cgpa {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-tertiary);
+  padding: 3px 10px;
+  background: var(--gradient-card);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.88rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timelineLine {
+    left: 20px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+  }
+
+  .timelineDot {
+    left: -2px !important;
+    right: auto !important;
+  }
+}

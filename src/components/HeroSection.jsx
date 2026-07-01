@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useTheme } from './ThemeProvider';
 import { personalInfo } from '@/data/portfolio';
@@ -67,12 +67,13 @@ export default function HeroSection() {
         <div className={styles.profileWrap}>
           <div className={styles.profileGlow} />
           <div className={styles.profileRing}>
-            <img
+            <Image
               src={personalInfo.profileImage}
               alt={personalInfo.name}
               className={styles.profileImg}
               width={160}
               height={160}
+              priority
             />
           </div>
           <div className={styles.statusBadge}>

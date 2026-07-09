@@ -8,8 +8,8 @@ export const personalInfo = {
   location: "Gujrat, Punjab, Pakistan",
   github: "https://github.com/Ali-Creates56",
   linkedin: "https://www.linkedin.com/in/muhammad-ali-a4581622a",
-  resumeUrl: "/Portfolio/resume/Muhammad_Ali_Resume.pdf",
-  profileImage: "/Portfolio/images/profile.jpg",
+  resumeUrl: "/resume/Muhammad_Ali_Resume.pdf",
+  profileImage: "/images/profile.jpg",
 };
 
 export const skills = [
@@ -73,7 +73,7 @@ export const defaultProjects = [
     description:
       "Expense-splitting app for groups that tracks shared costs, balances owed between members, and settles up with a clean, intuitive interface.",
     techStack: ["React"],
-    liveUrl: "",
+    liveUrl: "https://splitmate-ci8128j44-code-wi-th-ali.vercel.app/",
     githubUrl: "https://github.com/Ali-Creates56/SpliMate",
     featured: false,
   },

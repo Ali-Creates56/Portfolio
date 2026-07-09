@@ -26,10 +26,31 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    /* Simulate send for now - success animation */
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus('sent');
-    setForm({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/learner12you@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(form)
+      });
+      
+      if (response.ok) {
+        setStatus('sent');
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        console.error("Form submission failed.");
+        setStatus('idle');
+        alert("Something went wrong. Please try again later.");
+        return;
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('idle');
+      alert("Something went wrong. Please try again later.");
+      return;
+    }
     setTimeout(() => setStatus('idle'), 3000);
   };
 

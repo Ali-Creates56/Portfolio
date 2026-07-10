@@ -1,3 +1,5 @@
+import profileImg from "../assets/images/profile.jpg";
+
 export const personalInfo = {
   name: "Muhammad Ali",
   role: "Software Engineer",
@@ -9,7 +11,7 @@ export const personalInfo = {
   github: "https://github.com/Ali-Creates56",
   linkedin: "https://www.linkedin.com/in/muhammad-ali-a4581622a",
   resumeUrl: "/resume/Muhammad_Ali_Resume.pdf",
-  profileImage: "/images/profile.jpg",
+  profileImage: profileImg,
 };
 
 export const skills = [

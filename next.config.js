@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Apply basePath and assetPrefix only for GitHub Actions deployment
-  basePath: isGithubActions ? '/Portfolio' : '',
-  assetPrefix: isGithubActions ? '/Portfolio/' : '',
+  // Apply basePath and assetPrefix for production (GitHub Pages)
+  basePath: isProd ? '/Portfolio' : '',
+  assetPrefix: isProd ? '/Portfolio/' : '',
 };
 
 module.exports = nextConfig;

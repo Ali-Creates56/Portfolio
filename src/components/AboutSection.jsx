@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+
 import { personalInfo, achievements } from '@/data/portfolio';
 import { FiAward, FiCode, FiBookOpen, FiTarget } from 'react-icons/fi';
 import styles from './AboutSection.module.css';
@@ -43,7 +43,7 @@ export default function AboutSection() {
           <div className={`${styles.bioColumn} ${visible ? 'reveal-left active' : 'reveal-left'}`}>
             <div className={styles.bioCard}>
               <div className={styles.bioImgWrap}>
-                <Image
+                <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
                   className={styles.bioImg}

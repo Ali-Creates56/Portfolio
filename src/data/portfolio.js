@@ -1,4 +1,4 @@
-import profileImg from "../assets/images/profile.jpg";
+import { profileBase64 } from "./profileImage";
 
 export const personalInfo = {
   name: "Muhammad Ali",
@@ -11,7 +11,7 @@ export const personalInfo = {
   github: "https://github.com/Ali-Creates56",
   linkedin: "https://www.linkedin.com/in/muhammad-ali-a4581622a",
   resumeUrl: "/resume/Muhammad_Ali_Resume.pdf",
-  profileImage: profileImg,
+  profileImage: profileBase64,
 };
 
 export const skills = [

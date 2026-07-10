@@ -73,7 +73,7 @@ export const defaultProjects = [
     description:
       "Expense-splitting app for groups that tracks shared costs, balances owed between members, and settles up with a clean, intuitive interface.",
     techStack: ["React", "Vite", "Node.js (Serverless)", "MongoDB", "Capacitor"],
-    liveUrl: "https://splitmate-ci8128j44-code-wi-th-ali.vercel.app/",
+    liveUrl: "https://splitmate-ekduuluzr-code-wi-th-ali.vercel.app/",
     githubUrl: "https://github.com/Ali-Creates56/SpliMate",
     featured: false,
   },

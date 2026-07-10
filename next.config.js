@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // For GitHub Pages deployment, set basePath to your repo name
-  basePath: '/Portfolio',
-  assetPrefix: '/Portfolio/',
+  // Apply basePath and assetPrefix only for GitHub Actions deployment
+  basePath: isGithubActions ? '/Portfolio' : '',
+  assetPrefix: isGithubActions ? '/Portfolio/' : '',
 };
 
 module.exports = nextConfig;
